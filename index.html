@@ -1,0 +1,67 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial scale=1px">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js">
+    
+
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>My Beloved Calculator</title>
+
+</head>
+<body>
+<h1 id="titulo">"My Beloved Calculator <3"</h1>
+<h5 id="legenda">"By Caroline Vieira"</h5>
+<div class="calculator">
+    <input id="display" type=text readnonly>
+    
+    <div class="keys">
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('+')" value="+">+</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('-')" value="-">-</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('*')" value="*">*</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('/')" value="/">/</button>
+        <button class="btn btn-outline-danger" onclick="clearDisplay('C')" value="C">C</button>
+        <button class="btn btn-outline-danger" onclick="calculate()" value="=">=</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('0')" value="0">0</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('1')" value="1">1</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('2')" value="2">2</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('3')" value="3">3</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('4')" value="4">4</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('5')" value="5">5</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('6')" value="6">6</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('7')" value="7">7</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('8')" value="8">8</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('9')" value="9">9</button>
+        <button class="btn btn-outline-danger" onclick="appendToDisplay('.')" value=".">.</button>
+    </div>
+    
+</div>
+
+<script>
+var display = document.getElementById("display");
+    function appendToDisplay(input){
+        display.value += input;
+    }
+    function clearDisplay(){
+        display.value = ""
+
+    }
+    function calculate(){
+        try{
+            display.value = eval(display.value)
+        }catch (error){
+            display.value="Error";
+        }
+
+    }
+    </script>
+
+
+
+</body>
+
+</html>

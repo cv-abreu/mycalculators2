@@ -1,0 +1,48 @@
+body{
+    background-color:#9f2c3d;
+
+}
+
+#titulo,#legenda{
+
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.calculator{
+    width:14%;
+    height:42%;
+    background-color:rgb(31, 1, 10);
+    position:relative;
+    left:40%;
+    top:20%;
+    border-radius:5%;
+}
+
+#display{
+    justify-content:right;
+    background-color:#ff0033;
+    width:100%;
+    height:20%;
+    font-size: 150%;
+    text-align:right;
+
+}
+
+#resultado{
+    width:40%;
+    position:relative;
+    top:60%;
+    left:25%;
+    
+}
+
+#keys{
+    width:50%;
+    height:50%;
+    display:grid;
+    grid-gap:1%;
+    grid-template-columns:repeat(4,1fr);
+    position:relative;
+    bottom:35%;
+    left:1%;
+}
